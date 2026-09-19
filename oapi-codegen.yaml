@@ -1,0 +1,8 @@
+package: api
+generate:
+  models: true          # 生成数据模型（对应 OpenAPI 的 schemas）
+  gin-server: true      # 生成 Gin 服务端代码
+output: internal/api/api.gen.go
+output-options:
+  skip-fmt: false       # 生成后自动格式化
+  name-normalizer: ToCamelCaseWithInitialisms  # 规范命名（如 ID, HTTP）
